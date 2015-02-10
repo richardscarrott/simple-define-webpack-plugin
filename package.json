@@ -1,0 +1,27 @@
+{
+  "name": "simple-define-webpack-plugin",
+  "version": "0.0.0",
+  "description": "Define free variables just like the webpack.defineplugin but strings become strings instead of code fragments.",
+  "main": "SimpleDefinePlugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richardscarrott/simple-define-webpack-plugin"
+  },
+  "keywords": [
+    "Webpack",
+    "Define",
+    "Plugin"
+  ],
+  "author": "Richard Scarrott <riscarrott@googlemail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardscarrott/simple-define-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/richardscarrott/simple-define-webpack-plugin",
+  "dependencies": {
+    "webpack": "^1.4.14"
+  }
+}
