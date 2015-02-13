@@ -15,14 +15,14 @@ module.exports = SimpleDefinePlugin;
 SimpleDefinePlugin.prototype = Object.create(DefinePlugin.prototype);
 
 SimpleDefinePlugin.prototype.stringifyProps = function(obj) {
-    // TODO: check array behaviour, might need to stringify?
-    // TODO: check regex behaviour, might present itself as object?
     for (var prop in obj) {
         if (obj.hasOwnProperty(prop)) {
-            if (typeof obj[prop] === 'object') {
-                this.stringifyProps(obj[prop]);
-            } else if (typeof obj[prop] === 'string') {
+            if (typeof obj[prop] === 'string' || obj[prop] instanceof Array) {
                 obj[prop] = JSON.stringify(obj[prop]);
+            } else if (obj[prop] instanceof RegExp) {
+                obj[prop] = '' + obj[prop];
+            } else if (typeof obj[prop] === 'object') {
+                this.stringifyProps(obj[prop]);
             }
         }
     }
