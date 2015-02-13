@@ -1,6 +1,6 @@
 {
   "name": "simple-define-webpack-plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Define free variables just like the webpack.defineplugin but strings become strings instead of code fragments.",
   "main": "SimpleDefinePlugin.js",
   "scripts": {
